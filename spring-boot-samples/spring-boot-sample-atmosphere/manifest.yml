@@ -6,4 +6,4 @@ applications:
   random-route: true
   path: target\petclinic.war
   buildpacks:
-  - https://github.com/Laxmipriya22/java-buildpack.git
+  - https://github.com/cloudfoundry/java-buildpack
