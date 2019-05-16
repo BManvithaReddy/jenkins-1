@@ -1,9 +1,9 @@
 ---
 applications:
-- name: jenkins-sample-atmosphere
+- name: SpringBoot-Sample-Atmosphere
   memory: 768M
   instances: 1
   random-route: true
-  path: target\petclinic.war
+  path: target\spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar
   buildpacks:
   - https://github.com/cloudfoundry/java-buildpack
