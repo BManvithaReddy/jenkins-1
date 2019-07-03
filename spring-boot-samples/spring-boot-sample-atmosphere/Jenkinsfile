@@ -36,7 +36,7 @@ archiveArtifacts 'target/*.?ar'
 }
 stage('Artifact Uploader') {
            steps {
-               nexusArtifactUploader artifacts: [[artifactId: 'Jenkins', file: '/spring-boot-sample-atmosphere.war', type: 'war']], nexusUrl: '192.168.52.169:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'releases', version: '1.0.${BUILD_NUMBER}'
+               nexusArtifactUploader artifacts: [[artifactId: 'Jenkins', file: '/spring-boot-sample-atmosphere.war', type: 'war']],  groupId: 'com.test.jenkins',nexusUrl: '192.168.52.169:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'releases', version: '1.0.${BUILD_NUMBER}'
            }
        }
        stage('Deploy to PreProd') {
