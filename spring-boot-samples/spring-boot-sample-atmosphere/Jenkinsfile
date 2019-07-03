@@ -34,7 +34,8 @@ archiveArtifacts 'target/*.?ar'
 }
 }
 }
-stage('Artifact Uploader') {
+stage('Artifact Uploader')
+           {
            steps {
                nexusArtifactUploader artifacts: [[artifactId: 'Jenkins', file: '/Jenkins.war', type: 'war']], nexusUrl: 'stage('Artifact Uploader') {
            steps {
