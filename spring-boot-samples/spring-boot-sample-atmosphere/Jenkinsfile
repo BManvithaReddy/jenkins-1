@@ -46,7 +46,7 @@ stage('Artifact Uploader')
        stage('Deploy to PreProd') {
            steps {
                sh '''
-                   scp build/libs/myTeam.war tomcat@198.168.52.110:/opt/tomcat/webapps/myTeam.war;
+                   scp build/libs/myTeam.war tomcat@198.168.52.110:/opt/tomcat/webapps/Jenkins.war;
                    ssh tomcat@192.168.52.110 /opt/tomcat/bin/shutdown.sh;
                    ssh tomcat@192.168.52.110 /opt/tomcat/bin/startup.sh
                '''
